@@ -31,7 +31,7 @@ const Navbar = (props) => {
               </a>
             </li>
           </ul>
-          <form className="d-flex">
+          {/* <form className="d-flex">
             <input
               className="form-control me-2"
               type="search"
@@ -41,12 +41,11 @@ const Navbar = (props) => {
             <button className="btn btn-outline-primary" type="submit">
               Search
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
-
