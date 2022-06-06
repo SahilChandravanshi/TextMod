@@ -43,9 +43,10 @@ export default function TextForm(props) {
     setText(event.target.value);
   };
   const [text, setText] = useState("");
+
   return (
     <>
-      <div className="container">
+      <div className="container" style = {{color: props.mode==='dark'?'white':'#1f2023'}}>
         <h2>{props.heading}</h2>
         <div className="mb-3">
           <input
@@ -60,6 +61,7 @@ export default function TextForm(props) {
             rows="8"
             value={text}
             onChange={handleOnChange}
+            style = {{backgroundColor: props.mode==='dark'?'#1f2023':'white',color: props.mode==='dark'?'white':'#1f2023'}}
           ></textarea>
         </div>
         <button
@@ -86,7 +88,7 @@ export default function TextForm(props) {
           Clear Text
         </button>
       </div>
-      <div className="container my-4">
+      <div className="container my-4" style = {{color: props.mode==='dark'?'white':'#1f2023'}}>
         <h2>Your text summary</h2>
         <p>
           {
