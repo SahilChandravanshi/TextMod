@@ -4,10 +4,12 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to Uppercase","success");
   };
   const handleLoClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to Lowercase","success");
   };
   const readTxt = (event) => {
     let file = event.target.files[0];
@@ -16,28 +18,31 @@ export default function TextForm(props) {
       setText(event.target.result);
     };
     reader.readAsText(file);
+    props.showAlert("File Uploaded","success");
   };
 
-  const SenCase = () => {
-    let firstchar = text.charAt(0);
-    let newText = firstchar.toUpperCase();
-    setText(newText + text.slice(1));
-  };
+  // const SenCase = () => {
+  //   let firstchar = text.charAt(0);
+  //   let newText = firstchar.toUpperCase();
+  //   setText(newText + text.slice(1));
+  // };
 
   const handleClClick = () => {
     let newText = "";
     setText(newText);
+    props.showAlert("Text box cleared","success");
   };
   const speak = () => {
     let message = new SpeechSynthesisUtterance();
     message.text = text;
     window.speechSynthesis.speak(message);
+    props.showAlert("Speeking","success");
   };
   const copyIt = (event) => {
     setText(event.target.value);
     let newtext = navigator.clipboard.writeText(text);
     console.log(newtext);
-    alert("text copied successfully");
+    props.showAlert("Text Copied to clipboard","success");
   };
   const handleOnChange = (event) => {
     setText(event.target.value);
@@ -77,9 +82,9 @@ export default function TextForm(props) {
         <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>
           Convert to Lowercase
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={SenCase}>
+        {/* <button className="btn btn-primary mx-2 my-2" onClick={SenCase}>
           Convert To Sentence Case
-        </button>
+        </button> */}
 
         <button className="btn btn-success mx-2 my-2" onClick={copyIt}>
           Copy Text
