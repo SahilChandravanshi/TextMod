@@ -21,11 +21,11 @@ export default function TextForm(props) {
     props.showAlert("File Uploaded","success");
   };
 
-  // const SenCase = () => {
-  //   let firstchar = text.charAt(0);
-  //   let newText = firstchar.toUpperCase();
-  //   setText(newText + text.slice(1));
-  // };
+  const SenCase = () => {
+    let firstchar = text.charAt(0);
+    let newText = firstchar.toUpperCase();
+    setText(newText + text.slice(1));
+  };
 
   const handleClClick = () => {
     let newText = "";
@@ -82,9 +82,9 @@ export default function TextForm(props) {
         <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>
           Convert to Lowercase
         </button>
-        {/* <button className="btn btn-primary mx-2 my-2" onClick={SenCase}>
+        <button className="btn btn-primary mx-2 my-2" onClick={SenCase}>
           Convert To Sentence Case
-        </button> */}
+        </button>
 
         <button className="btn btn-success mx-2 my-2" onClick={copyIt}>
           Copy Text
