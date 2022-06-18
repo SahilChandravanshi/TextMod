@@ -53,10 +53,8 @@ export default function TextForm(props) {
     props.showAlert("Speeking", "success");
   };
   const copyIt = (event) => {
-    setText(event.target.value);
-    let newtext = navigator.clipboard.writeText(text);
-    console.log(newtext);
-    props.showAlert("Text Copied to clipboard", "success");
+    navigator.clipboard.writeText(text);
+    props.showAlert("Copied to Clipboard!", "success");
   };
   const handleOnChange = (event) => {
     setText(event.target.value);
