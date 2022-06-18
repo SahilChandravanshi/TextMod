@@ -32,6 +32,7 @@ export default function TextForm(props) {
     var b = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
     let newText = text.replace(/[a-z]/gi, (c) => b[a.indexOf(c)]);
     setText(newText);
+    props.showAlert("ROT13 Conversion Done", "success");
   };
 
   // const SenCase = () => {
