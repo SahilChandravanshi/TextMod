@@ -102,9 +102,9 @@ export default function TextForm(props) {
           Convert to Lowercase
         </button>
 
-        <button className="btn btn-primary mx-2 my-2" onClick={SenCase}>
+        {/* <button className="btn btn-primary mx-2 my-2" onClick={SenCase}>
           Convert To Sentence Case
-        </button>
+        </button> */}
 
         <button className="btn btn-primary mx-2 my-2" onClick={handleRmSClick}>
           Remove Extra spaces
