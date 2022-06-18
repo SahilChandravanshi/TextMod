@@ -34,11 +34,11 @@ export default function TextForm(props) {
     setText(newText);
   };
 
-  const SenCase = () => {
-    let firstchar = text.charAt(0);
-    let newText = firstchar.toUpperCase();
-    setText(newText + text.slice(1));
-  };
+  // const SenCase = () => {
+  //   let firstchar = text.charAt(0);
+  //   let newText = firstchar.toUpperCase();
+  //   setText(newText + text.slice(1));
+  // };
 
   const handleClClick = () => {
     let newText = "";
