@@ -1,5 +1,4 @@
 import "./App.css";
-// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import { useState } from "react";
@@ -44,7 +43,6 @@ function App() {
       <div className="container my-3">
         <TextForm heading="Upload or enter the text" showAlert={showAlert} mode={mode} />
       </div>
-      {/* <About/> */}
     </>
   );
 }
